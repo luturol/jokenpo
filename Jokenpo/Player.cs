@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Jokenpo
 {
-    public class Play
+    public class Player
     {
-        public Position Position
+        public HandForm HandForm
         {
             get; set;
         }

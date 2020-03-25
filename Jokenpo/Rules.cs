@@ -6,40 +6,40 @@ namespace Jokenpo
 {
     public class RockRules: AbstractRules
     {
-        public override GameStatus WinAgainst(Position oponent)
+        public override GameResult WinAgainst(HandForm oponent)
         {
-            if (oponent == Position.Paper)
-                return GameStatus.Lose;
-            else if (oponent == Position.Scissor)
-                return GameStatus.Win;
+            if (oponent == HandForm.Paper)
+                return GameResult.Lose;
+            else if (oponent == HandForm.Scissor)
+                return GameResult.Win;
             else
-                return GameStatus.Tie;
+                return GameResult.Tie;
         }
     }
 
     public class PaperRules : AbstractRules
     {
-        public override GameStatus WinAgainst(Position oponent)
+        public override GameResult WinAgainst(HandForm oponent)
         {
-            if (oponent == Position.Scissor)
-                return GameStatus.Lose;
-            else if (oponent == Position.Rock)
-                return GameStatus.Win;
+            if (oponent == HandForm.Scissor)
+                return GameResult.Lose;
+            else if (oponent == HandForm.Rock)
+                return GameResult.Win;
             else
-                return GameStatus.Tie;
+                return GameResult.Tie;
         }
     }
 
     public class ScissorRules : AbstractRules
     {
-        public override GameStatus WinAgainst(Position oponent)
+        public override GameResult WinAgainst(HandForm oponent)
         {
-            if (oponent == Position.Rock)
-                return GameStatus.Lose;
-            else if (oponent == Position.Paper)
-                return GameStatus.Win;
+            if (oponent == HandForm.Rock)
+                return GameResult.Lose;
+            else if (oponent == HandForm.Paper)
+                return GameResult.Win;
             else
-                return GameStatus.Tie;
+                return GameResult.Tie;
         }
     }
 

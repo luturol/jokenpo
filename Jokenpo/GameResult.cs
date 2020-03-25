@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Jokenpo
 {
-    public enum GameStatus
+    public enum GameResult
     {
         Tie,
         Win,

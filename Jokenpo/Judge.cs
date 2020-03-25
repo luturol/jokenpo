@@ -4,9 +4,9 @@ namespace Jokenpo
 {
     public class Judge
     {
-        public GameStatus ValidateGame(Play player1, Play player2)
+        public GameResult ValidateGame(Player player1, Player player2)
         {
-            return player1.Position.ToRule().WinAgainst(player2.Position);             
+            return player1.HandForm.ToRule().WinAgainst(player2.HandForm);             
         }
     }
 }

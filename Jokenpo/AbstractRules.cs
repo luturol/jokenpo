@@ -6,6 +6,6 @@ namespace Jokenpo
 {
     public abstract class AbstractRules
     {
-        public abstract GameStatus WinAgainst(Position oponent);
+        public abstract GameResult WinAgainst(HandForm opponent);
     }
 }
