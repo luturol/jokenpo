@@ -13,7 +13,7 @@ namespace Jokenpo
 
     public static class PositionsExtensions
     {
-        public static AbstractValidation ToRule(this Position positions)
+        public static AbstractRules ToRule(this Position positions)
         {
             if (positions == Position.Rock)
                 return new RockRules();
@@ -22,7 +22,7 @@ namespace Jokenpo
             else if (positions == Position.Scissor)
                 return new ScissorRules();
             else
-                throw new Exception("not yet implemented");
+                throw new ArgumentException("There is no position for this option");
         }
     }    
 }

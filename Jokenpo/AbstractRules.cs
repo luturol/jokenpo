@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Jokenpo
 {
-    public abstract class AbstractValidation
+    public abstract class AbstractRules
     {
-        public abstract bool WinAgainst(Position oponent);
+        public abstract GameStatus WinAgainst(Position oponent);
     }
 }

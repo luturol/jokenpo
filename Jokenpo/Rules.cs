@@ -4,36 +4,42 @@ using System.Text;
 
 namespace Jokenpo
 {
-    public class RockRules: AbstractValidation
+    public class RockRules: AbstractRules
     {
-        public override bool WinAgainst(Position oponent)
+        public override GameStatus WinAgainst(Position oponent)
         {
-            if(oponent == Position.Paper)
-                return false;
+            if (oponent == Position.Paper)
+                return GameStatus.Lose;
+            else if (oponent == Position.Scissor)
+                return GameStatus.Win;
             else
-                return true;
+                return GameStatus.Tie;
         }
     }
 
-    public class PaperRules : AbstractValidation
+    public class PaperRules : AbstractRules
     {
-        public override bool WinAgainst(Position oponent)
+        public override GameStatus WinAgainst(Position oponent)
         {
             if (oponent == Position.Scissor)
-                return false;
+                return GameStatus.Lose;
+            else if (oponent == Position.Rock)
+                return GameStatus.Win;
             else
-                return true;
+                return GameStatus.Tie;
         }
     }
 
-    public class ScissorRules : AbstractValidation
+    public class ScissorRules : AbstractRules
     {
-        public override bool WinAgainst(Position oponent)
+        public override GameStatus WinAgainst(Position oponent)
         {
             if (oponent == Position.Rock)
-                return false;
+                return GameStatus.Lose;
+            else if (oponent == Position.Paper)
+                return GameStatus.Win;
             else
-                return true;
+                return GameStatus.Tie;
         }
     }
 
