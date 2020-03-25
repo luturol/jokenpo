@@ -9,7 +9,8 @@ namespace JokenpoTests
         [TestMethod]
         public void Should_be_able_to_rock_win_scissor()
         {
-            Assert.IsTrue(new JokenpoJudge().ValidateGame(JokenpoPositions.Rock, JokenpoPositions.Scissor));
+            var result = new Judge().ValidateGame(new Play() { Position = Position.Rock }, new Play() { Position = Position.Scissor });
+            Assert.IsTrue(result);
         }
     }
 }

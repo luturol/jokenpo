@@ -4,10 +4,8 @@ using System.Text;
 
 namespace Jokenpo
 {
-    public enum JokenpoPositions
+    public abstract class AbstractValidation
     {
-        Rock,
-        Paper,
-        Scissor
+        public abstract bool WinAgainst(Position oponent);
     }
 }
