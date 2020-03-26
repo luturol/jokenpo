@@ -14,7 +14,7 @@ dotnet test
 
 ## How I solved the problem
 
-Jokenpo consist of a game that has at least 3 hand form and which one has it's own rule to win, tie or lose. For this I thought that I must have some way of validation. The validation I wanted was make it more "generic" and easy to create. Each validation only works for that one had form. To do it, I made an Enum for Hand forms:
+Jokenpo consist of a game that has at least 3 hand form and which one has it's own rule to win, tie or lose. For this I thought that I must have some way of validation. The validation I wanted was to make it more "generic" and easy to create. Each validation only works for that one had form. To do it, I made an Enum for Hand forms:
 
 ```csharp
 public enum HandForm
